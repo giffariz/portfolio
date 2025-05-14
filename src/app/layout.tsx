@@ -8,6 +8,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Loader } from "@/components/Loader/Loader";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,7 +38,9 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <MantineProvider withGlobalClasses withCssVariables>
           <Loader />
-          {children}
+          <LanguageProvider>
+            {children}
+          </LanguageProvider>
         </MantineProvider>
       </body>
     </html>

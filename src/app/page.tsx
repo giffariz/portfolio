@@ -8,9 +8,9 @@ export default function Home() {
   const [activeTab, setActiveTab] = useState<string | null>("home");
 
   return (
-    <Tabs variant="none" value={activeTab} onChange={setActiveTab}>
+    <Tabs variant="none" value={activeTab} onChange={setActiveTab} m={"lg"}>
       <Navbar activeTab={activeTab} />
-      <Content />
+      <Content onClickProjects={() => setActiveTab("projects")}/>
     </Tabs>
   );
 }

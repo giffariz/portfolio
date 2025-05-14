@@ -1,0 +1,17 @@
+.background {
+  position: fixed;
+  width: 100dvw;
+  height: 100dvh;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+  background-color: #ffffff;
+  opacity: 0.8;
+  background-image: repeating-radial-gradient(
+      circle at 0 0,
+      transparent 0,
+      #ffffff 40px
+    ),
+    repeating-linear-gradient(#efefef55, #efefef);
+}

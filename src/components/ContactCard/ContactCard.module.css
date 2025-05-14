@@ -1,0 +1,17 @@
+.card {
+    background-color: var(--mantine-color-body);
+    align-items: center;
+    z-index: 3;
+}
+
+.button {
+    width: 40%;
+
+    @media (max-width: $mantine-breakpoint-sm) {
+        width: 100%;
+    }
+}
+
+.avatar {
+    border: 2px solid var(--mantine-color-body);
+}

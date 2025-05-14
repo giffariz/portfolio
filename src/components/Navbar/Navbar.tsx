@@ -15,6 +15,7 @@ import {
 import React, { useState } from "react";
 import classes from "./Navbar.module.css";
 import { ThemeToggle } from "../ThemeToggle/ThemeToggle";
+import LanguageSelector from "../LanguageSelector/LanguageSelector";
 
 interface NavbarProps {
     activeTab: string | null;
@@ -34,32 +35,32 @@ export const Navbar = ({ activeTab }: NavbarProps) => {
         <Tabs.List ref={setRootRef} className={classes.list}>
             <Tabs.Tab value="home" ref={setControlRef("home")} className={classes.tab}>
                 <Center inline>
-                    <IconHomeFilled size={20} className="mantine-hidden-from-sm" />
-                    <Text fw={500} ml={5} visibleFrom="sm">
+                    <IconHomeFilled size={20} className="mantine-hidden-from-md" />
+                    <Text fw={500} ml={5} visibleFrom="md">
                         Home
                     </Text>
                 </Center>
             </Tabs.Tab>
             <Tabs.Tab value="experience" ref={setControlRef("experience")} className={classes.tab}>
                 <Center inline>
-                    <IconBriefcaseFilled size={20} className="mantine-hidden-from-sm" />
-                    <Text fw={500} ml={5} visibleFrom="sm">
+                    <IconBriefcaseFilled size={20} className="mantine-hidden-from-md" />
+                    <Text fw={500} ml={5} visibleFrom="md">
                         Experience
                     </Text>
                 </Center>
             </Tabs.Tab>
             <Tabs.Tab value="projects" ref={setControlRef("projects")} className={classes.tab}>
                 <Center inline>
-                    <IconCodeCircleFilled size={20} className="mantine-hidden-from-sm" />
-                    <Text fw={500} ml={5} visibleFrom="sm">
+                    <IconCodeCircleFilled size={20} className="mantine-hidden-from-md" />
+                    <Text fw={500} ml={5} visibleFrom="md">
                         Projects
                     </Text>
                 </Center>
             </Tabs.Tab>
             <Tabs.Tab value="about" ref={setControlRef("about")} className={classes.tab}>
                 <Center inline>
-                    <IconUserFilled size={20} className="mantine-hidden-from-sm" />
-                    <Text fw={500} ml={5} visibleFrom="sm">
+                    <IconUserFilled size={20} className="mantine-hidden-from-md" />
+                    <Text fw={500} ml={5} visibleFrom="md">
                         About Me
                     </Text>
                 </Center>
@@ -72,7 +73,8 @@ export const Navbar = ({ activeTab }: NavbarProps) => {
                 transitionDuration={500}
             />
 
-            <Divider orientation="vertical" size={"sm"} ml={10} mr={10} />
+            <Divider orientation="vertical" size={"sm"} mr={10} />
+            <LanguageSelector />
             <ThemeToggle />
         </Tabs.List>
     );
