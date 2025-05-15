@@ -1,12 +1,12 @@
 const id = {
     home: {
-        greeting: "Hai, saya Giffari Zakawaly",
-        role: "Frontend Developer",
+        greeting: "Hai, saya Giff",
         shortDescription: "Dengan pengalaman lebih dari 3 tahun, membangun antarmuka web yang responsif dan terstruktur menggunakan React dan TypeScript. Saat ini aktif mengerjakan proyek pribadi—atau mungkin, proyekmu berikutnya?"
     },
 
     experience: {
-        title: "Pengalaman Kerja",
+        title1: "Tempatku",
+        title2: "Berkembang",
         items: [
             {
                 role: "Frontend Developer",

@@ -10,7 +10,10 @@ export default function Home() {
   return (
     <Tabs variant="none" value={activeTab} onChange={setActiveTab} m={"lg"}>
       <Navbar activeTab={activeTab} />
-      <Content onClickProjects={() => setActiveTab("projects")}/>
+      <Content
+        onClickProjects={() => setActiveTab("projects")}
+        activeTab={activeTab}
+      />
     </Tabs>
   );
 }

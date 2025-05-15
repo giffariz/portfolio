@@ -1,12 +1,12 @@
 const en = {
     home: {
-        greeting: "Hi, I'm Giffari Zakawaly",
-        role: "Frontend Developer",
+        greeting: "Hi, I am Giff",
         shortDescription: "With over 3 years of experience as a Frontend Developer, I build responsive and well-structured web interfaces using React and TypeScript. Currently I'm working on personal projects—or maybe, your next one?"
     },
 
     experience: {
-        title: "Work Experience",
+        title1: "Where I",
+        title2: "Thrive",
         items: [
             {
                 role: "Frontend Developer",

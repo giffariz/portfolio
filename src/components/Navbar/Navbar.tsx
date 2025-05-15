@@ -61,7 +61,7 @@ export const Navbar = ({ activeTab }: NavbarProps) => {
                 <Center inline>
                     <IconUserFilled size={20} className="mantine-hidden-from-md" />
                     <Text fw={500} ml={5} visibleFrom="md">
-                        About Me
+                        About
                     </Text>
                 </Center>
             </Tabs.Tab>
