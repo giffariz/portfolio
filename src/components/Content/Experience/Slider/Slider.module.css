@@ -1,0 +1,66 @@
+.scrollArea {
+    justify-self: center;
+    width: 50dvw;
+
+    @media (max-width: $mantine-breakpoint-md) {
+        width: 94dvw;
+    }
+}
+
+.carouselWrapper {
+    display: flex;
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.card {
+    flex-shrink: 0;
+    width: 50dvw;
+    scroll-snap-align: start;
+    background: transparent;
+
+    @media (max-width: $mantine-breakpoint-md) {
+        width: 94dvw;
+    }
+}
+
+.company {
+    font-weight: 600;
+    font-size: calc(var(--mantine-font-size-md) * 1.5);
+
+    @media (max-width: $mantine-breakpoint-xs) {
+        font-size: var(--mantine-font-size-md);
+    }
+}
+
+.period {
+    font-size: var(--mantine-font-size-md);
+
+    @media (max-width: $mantine-breakpoint-xs) {
+        font-size: var(--mantine-font-size-xs);
+    }
+}
+
+.responsibilty {
+    font-size: var(--mantine-font-size-lg);
+    
+    @media (max-width: $mantine-breakpoint-xs) {
+        font-size: var(--mantine-font-size-sm);
+    }
+}
+
+.badge {
+    font-size: var(--mantine-font-size-md);
+
+    @media (max-width: $mantine-breakpoint-xs) {
+        font-size: var(--mantine-font-size-xs);
+    }
+}
+
+.indicator {
+    width: 10;
+    height: 10;
+    transition: all 0.3s linear;
+}

@@ -15,7 +15,7 @@ export default function LanguageSelector() {
             radius={"xl"}
         >
             <Text size='xs' fw={500}>
-                {lang === "en" ? "EN" : "ID"}
+                {lang === "en" ? "ID" : "EN"}
             </Text>
         </ActionIcon>
     );

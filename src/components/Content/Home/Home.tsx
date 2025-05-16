@@ -110,6 +110,13 @@ export default function Home({ onClickProjects }: Readonly<IHomeProps>) {
                     timingFunction: "ease",
                 }}
                 withCloseButton={false}
+                overlayProps={{
+                    style: {
+                        backdropFilter: 'blur(6px)',
+                        WebkitBackdropFilter: 'blur(6px)',
+                        backgroundColor: 'rgba(0, 0, 0, 0.4)',
+                    },
+                }}
             >
                 <ContactCard />
             </Drawer>

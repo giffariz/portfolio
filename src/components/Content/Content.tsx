@@ -31,27 +31,45 @@ export const Content = ({ onClickProjects, activeTab }: IContentProps) => {
             <Tabs.Panel value="experience">
                 <Transition mounted={activeTab === "experience"} transition="fade" duration={400}>
                     {(styles) => (
-                        <div style={styles}>
-                            <Experience />
-                        </div>
+                        <Flex
+                            justify="center"
+                            align="center"
+                            h="80dvh"
+                        >
+                            <div style={styles}>
+                                <Experience />
+                            </div>
+                        </Flex>
                     )}
                 </Transition>
             </Tabs.Panel>
             <Tabs.Panel value="projects">
                 <Transition mounted={activeTab === "projects"} transition="fade" duration={400}>
                     {(styles) => (
-                        <div style={styles}>
-                            PROJECTS
-                        </div>
+                        <Flex
+                            justify="center"
+                            align="center"
+                            h="80dvh"
+                        >
+                            <div style={styles}>
+                                PROJECTS
+                            </div>
+                        </Flex>
                     )}
                 </Transition>
             </Tabs.Panel>
             <Tabs.Panel value="about">
                 <Transition mounted={activeTab === "about"} transition="fade" duration={400}>
                     {(styles) => (
-                        <div style={styles}>
-                            ABOUT ME
-                        </div>
+                        <Flex
+                            justify="center"
+                            align="center"
+                            h="80dvh"
+                        >
+                            <div style={styles}>
+                                ABOUT ME
+                            </div>
+                        </Flex>
                     )}
                 </Transition>
             </Tabs.Panel>
