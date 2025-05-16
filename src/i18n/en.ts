@@ -1,33 +1,48 @@
 const en = {
     home: {
-        greeting: "Hi, I'm Giffari Zakawaly",
-        role: "Frontend Developer",
-        shortDescription: "With over 3 years of experience as a Frontend Developer, I build responsive and well-structured web interfaces using React and TypeScript. Currently I'm working on personal projects—or maybe, your next one?"
+        greeting: "Hi, I am Giff",
+        shortDescription:
+            "With over 3 years of experience as a Frontend Developer, I build responsive and well-structured web interfaces using React and TypeScript. Currently I'm working on personal projects—or maybe, your next one?",
     },
 
     experience: {
-        title: "Work Experience",
+        title1: "Where I",
+        title2: "Thrive",
         items: [
             {
                 role: "Frontend Developer",
-                company: "PT Astra Graphia Information Technology (AGIT)",
+                company: "PT Astra Graphia Information Technology",
                 period: "May 2022 - Present",
-                description:
-                    "I'm part of the team developing a comprehensive web-based system for internal use. My responsibilities include turning UI designs into responsive React components, integrating GraphQL APIs, and continuously improving layout and functionality to meet user and business needs.",
+                responsibilty: [
+                    "Collaborated with Backend, QA, and Business teams to prepare upcoming features and break them into actionable tickets",
+                    "Built responsive and maintainable UI with React and TypeScript, ensuring it works smoothly on all devices",
+                    "Integrated GraphQL APIs with backend team to build pages that meet project goals",
+                    "Improved existing pages by updating layout, content, and features to enhance User Experience",
+                ],
+                techStack: ["React", "TypeScript", "GraphQL", "Ant Design"],
             },
             {
                 role: "WordPress Developer",
                 company: "TIMEO",
                 period: "May 2021 - August 2021",
-                description:
-                    "During my internship at TIMEO, I focused on redesigning website layouts and developing new features using WordPress. I also handled content updates, bug fixes, and created mobile-friendly themes for better user experience.",
+                responsibilty: [
+                    "Redesign layout with attention to style and size of type, photographs, and graphics",
+                    "Develops new website features and maintain website content",
+                    "Checking for trouble-shooting, tracking issues, and logs bugs",
+                    "Making the website responsive",
+                ],
+                techStack: ["WordPress", "Elementor", "CSS"],
             },
             {
-                role: "Web Developer - Health Platform",
+                role: "WordPress Developer (Internship)",
                 company: "Diskominfo Kabupaten Malang",
                 period: "Jan 2018 - Feb 2018",
-                description:
-                    "I worked on redesigning the website for Puskesmas Kedungkandang, managing its content, and providing user training. The site was built with a CMS to support easier content updates moving forward.",
+                responsibilty: [
+                    "Redesign website of Puskesmas Kedungkandang",
+                    "Handling website content management systems",
+                    "Created user manuals and provide training to client",
+                ],
+                techStack: ["WordPress", "Elementor", "CSS"],
             },
         ],
     },
@@ -52,21 +67,28 @@ const en = {
 
     about: {
         title: "About Me",
-        description: "I'm a Frontend Developer with over 3 years of experience in building responsive and well-structured web interfaces. I actively work on web-based systems using React, TypeScript, and GraphQL, and I'm used to collaborating in cross-functional teams to deliver scalable and maintainable solutions.",
-        highlight: "I believe clean code and intuitive interfaces are the foundation of great user experience.",
+        description:
+            "I'm a Frontend Developer with over 3 years of experience in building responsive and well-structured web interfaces. I actively work on web-based systems using React, TypeScript, and Next.js, and I'm used to collaborating in cross-functional teams to deliver scalable and maintainable solutions.",
+        highlight:
+            "I believe clean code and intuitive interfaces are the foundation of great user experience.",
         note: "I hold a degree in Informatics, which shaped my logical thinking and structured approach to software development.",
         languages: ["Indonesian", "English"],
         techSkills: [
-            "React", "TypeScript", "GraphQL",
-            "JavaScript", "HTML", "CSS",
-            "Git", "Jira", "Confluence"
-        ]
+            "Next",
+            "React",
+            "TypeScript",
+            "Tailwind CSS",
+            "Ant Design",
+            "Mantine UI",
+            "Shadcn UI",
+            "GraphQL",
+        ],
     },
 
     card: {
         cv: "View CV",
         email: "Tell Me Your Idea",
-    }
+    },
 };
 
 export default en;
