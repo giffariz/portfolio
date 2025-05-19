@@ -36,7 +36,7 @@ const en = {
             {
                 role: "WordPress Developer (Internship)",
                 company: "Diskominfo Kabupaten Malang",
-                period: "Jan 2018 - Feb 2018",
+                period: "January 2018 - February 2018",
                 responsibilty: [
                     "Redesign website of Puskesmas Kedungkandang",
                     "Handling website content management systems",
@@ -48,7 +48,8 @@ const en = {
     },
 
     projects: {
-        title: "Projects",
+        title1: "Tangible",
+        title2: "Thoughts",
         items: [
             {
                 name: "STAR AGIT Web System",
@@ -66,21 +67,18 @@ const en = {
     },
 
     about: {
-        title: "About Me",
-        description:
-            "I'm a Frontend Developer with over 3 years of experience in building responsive and well-structured web interfaces. I actively work on web-based systems using React, TypeScript, and Next.js, and I'm used to collaborating in cross-functional teams to deliver scalable and maintainable solutions.",
-        highlight:
-            "I believe clean code and intuitive interfaces are the foundation of great user experience.",
-        note: "I hold a degree in Informatics, which shaped my logical thinking and structured approach to software development.",
-        languages: ["Indonesian", "English"],
+        title1: "Behind the",
+        title2: "Code",
+        motto: "For me, a digital solution isn't about how fast it's built — but how well it lasts, adapts, and maintains its quality over time.",
+        quote: "Readable code is not optional",
         techSkills: [
-            "Next",
             "React",
             "TypeScript",
-            "Tailwind CSS",
+            "Next",
+            "Tailwind",
             "Ant Design",
-            "Mantine UI",
-            "Shadcn UI",
+            "Mantine",
+            "Shadcn",
             "GraphQL",
         ],
     },

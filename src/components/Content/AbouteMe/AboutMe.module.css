@@ -1,0 +1,71 @@
+$PRIMARY_COL_HEIGHT: 50dvh;
+$SECONDARY_COL_HEIGHT: calc($PRIMARY_COL_HEIGHT / 2 - var(--mantine-spacing-md) / 2);
+
+.boxAvatar {
+    position: relative;
+    height: $PRIMARY_COL_HEIGHT;
+    border-radius: 16px;
+    overflow: hidden;
+
+    @media (max-width: $mantine-breakpoint-md) {
+        height: 20dvh;
+    }
+
+    .avatar {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: grayscale(1) contrast(1.5);
+    }
+
+    .avatarGradient {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, var(--mantine-color-blue-7), var(--mantine-color-cyan-6));
+        mix-blend-mode: multiply;
+        opacity: 0.8;
+        pointer-events: none;
+    }
+}
+
+.boxDesc {
+    position: relative;
+    height: $SECONDARY_COL_HEIGHT;
+    border-radius: 16px;
+    overflow: hidden;
+    padding: var(--mantine-spacing-md);
+    background-color: light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-5));
+    font-size: calc(var(--mantine-font-size-lg) * 1.3);
+    font-weight: 600;
+    
+    @media (max-width: $mantine-breakpoint-md) {
+        font-size: var(--mantine-font-size-sm);
+        height: auto;
+    }
+}
+
+.badge {
+    font-size: var(--mantine-font-size-md);
+
+    @media (max-width: $mantine-breakpoint-lg) {
+        font-size: var(--mantine-font-size-xs);
+    }
+}
+
+.icon {
+    width: 15dvw;
+    height: 15dvw;
+    position: absolute;
+    bottom: -3.5dvw;
+    right: -3.5dvw;
+    opacity: 0.05;
+    pointer-events: none;
+
+    @media (max-width: $mantine-breakpoint-md) {
+        width: 20dvw;
+        height: 20dvw;
+    }
+}

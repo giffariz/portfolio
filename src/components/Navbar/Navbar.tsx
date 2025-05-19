@@ -12,7 +12,7 @@ import {
     IconCodeCircleFilled,
     IconUserFilled,
 } from "@tabler/icons-react";
-import React, { useState } from "react";
+import { useState } from "react";
 import classes from "./Navbar.module.css";
 import { ThemeToggle } from "../ThemeToggle/ThemeToggle";
 import LanguageSelector from "../LanguageSelector/LanguageSelector";

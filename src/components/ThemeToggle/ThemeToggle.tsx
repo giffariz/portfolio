@@ -1,6 +1,5 @@
 import { ActionIcon, useComputedColorScheme, useMantineColorScheme } from '@mantine/core'
 import { IconSun, IconMoon } from '@tabler/icons-react'
-import React from 'react'
 import cx from "clsx";
 import classes from "./ThemeToggle.module.css";
 

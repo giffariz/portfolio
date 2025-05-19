@@ -1,6 +1,6 @@
 "use client";
 import { Center, Stack, Text } from "@mantine/core";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import classes from "./Loader.module.css";
 import { usePathname } from "next/navigation";
 

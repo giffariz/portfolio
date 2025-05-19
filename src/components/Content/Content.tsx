@@ -1,8 +1,9 @@
 import { Flex, Tabs, Transition } from "@mantine/core";
-import React from "react";
 import Home from "./Home/Home";
 import { Dots } from "../Dot/Dots";
 import Experience from "./Experience/Experience";
+import { AboutMe } from "./AbouteMe/AboutMe";
+import { Projects } from "./Projects/Projects";
 
 interface IContentProps {
     onClickProjects: () => void;
@@ -52,7 +53,7 @@ export const Content = ({ onClickProjects, activeTab }: IContentProps) => {
                             h="80dvh"
                         >
                             <div style={styles}>
-                                PROJECTS
+                                <Projects />
                             </div>
                         </Flex>
                     )}
@@ -67,7 +68,7 @@ export const Content = ({ onClickProjects, activeTab }: IContentProps) => {
                             h="80dvh"
                         >
                             <div style={styles}>
-                                ABOUT ME
+                                <AboutMe />
                             </div>
                         </Flex>
                     )}
