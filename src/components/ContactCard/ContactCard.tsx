@@ -15,7 +15,7 @@ export function ContactCard() {
     return (
         <Card className={classes.card}>
             <Avatar
-                src="./Avatar.jpg"
+                src="./pic/avatar.jpg"
                 size={120}
                 radius={80}
                 mx="auto"
@@ -46,7 +46,7 @@ export function ContactCard() {
                 className={classes.button}
                 component="a"
                 target="_blank"
-                href="/CV_Giffari.pdf"
+                href="/file/CV_Giffari.pdf"
                 rel="noopener noreferrer"
             >
                 {t.card.cv}

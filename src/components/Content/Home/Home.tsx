@@ -85,13 +85,13 @@ export default function Home({ onClickProjects }: Readonly<IHomeProps>) {
                         >
                             Profile Card
                             <IconUsers
-                                size={64} // besar banget!
+                                size={64}
                                 style={{
                                     position: 'absolute',
                                     right: -24,
                                     top: '50%',
                                     transform: 'translateY(-50%)',
-                                    opacity: 0.2, // opsional: biar kayak watermark
+                                    opacity: 0.2,
                                     pointerEvents: 'none',
                                 }}
                             />

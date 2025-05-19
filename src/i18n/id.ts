@@ -36,7 +36,7 @@ const id = {
             {
                 role: "WordPress Developer (Magang)",
                 company: "Diskominfo Kabupaten Malang",
-                period: "Jan 2018 - Feb 2018",
+                period: "Januari 2018 - Februari 2018",
                 responsibilty: [
                     "Mendesain ulang website Puskesmas Kedungkandang",
                     "Mengelola sistem manajemen konten website",
@@ -48,7 +48,8 @@ const id = {
     },
 
     projects: {
-        title: "Proyek",
+        title1: "Wujudan",
+        title2: "Pemikiran",
         items: [
             {
                 name: "Web Sistem STAR AGIT",
@@ -66,21 +67,18 @@ const id = {
     },
 
     about: {
-        title: "Tentang Saya",
-        description:
-            "Saya adalah Frontend Developer dengan lebih dari 3 tahun pengalaman membangun antarmuka web yang responsif dan terstruktur. Saat ini saya aktif mengembangkan sistem berbasis web menggunakan React, TypeScript, dan Next.js, serta terbiasa berkolaborasi dalam tim lintas divisi untuk menghasilkan solusi digital yang scalable dan maintainable.",
-        highlight:
-            "Saya percaya bahwa kode yang bersih dan antarmuka yang intuitif adalah kunci pengalaman pengguna yang baik.",
-        note: "Saya menempuh pendidikan di bidang Informatika, yang turut membentuk dasar logika dan struktur berpikir dalam pengembangan perangkat lunak.",
-        languages: ["Bahasa Indonesia", "Bahasa Inggris"],
+        title1: "Di balik",
+        title2: "Kode",
+        motto: "Bagiku, solusi digital bukan soal cepat jadi — tapi bagaimana ia bisa bertahan, beradaptasi, dan tetap terjaga kualitasnya seiring waktu.",
+        quote: "Kode yang mudah dibaca itu wajib",
         techSkills: [
-            "Next",
             "React",
             "TypeScript",
-            "Tailwind CSS",
+            "Next",
+            "Tailwind",
             "Ant Design",
-            "Mantine UI",
-            "Shadcn UI",
+            "Mantine",
+            "Shadcn",
             "GraphQL",
         ],
     },

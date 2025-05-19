@@ -1,7 +1,7 @@
 "use client";
 import { useLanguage } from '@/context/LanguageContext';
 import { ScrollArea, Card, Divider, Badge, List, Group, Button, Text } from '@mantine/core'
-import React, { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import classes from './Slider.module.css'
 
 export const Slider = () => {

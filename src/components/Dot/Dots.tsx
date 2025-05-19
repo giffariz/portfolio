@@ -1,4 +1,3 @@
-import React from 'react'
 import { DotsSvg } from './DotsSvg'
 import classes from './Dots.module.css';
 

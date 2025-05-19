@@ -18,7 +18,7 @@
             inset -10px -10px 40px #3d3d3d;
     }
 
-    @media (max-width: 48em) {
+    @media (max-width: $mantine-breakpoint-xs) {
         min-width: 90vw;
     }
 }
