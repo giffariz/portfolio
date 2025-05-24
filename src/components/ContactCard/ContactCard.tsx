@@ -15,7 +15,7 @@ export function ContactCard() {
     return (
         <Card className={classes.card}>
             <Avatar
-                src="./pic/avatar.jpg"
+                src="./pic/avatar.webp"
                 size={120}
                 radius={80}
                 mx="auto"
