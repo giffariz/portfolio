@@ -41,3 +41,17 @@ a {
     color-scheme: dark;
   }
 }
+
+@keyframes dashDraw {
+  0% {
+    stroke-dashoffset: 100%;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  90%,
+  100% {
+    stroke-dasharray: 500%;
+    stroke-dashoffset: 100%;
+  }
+}

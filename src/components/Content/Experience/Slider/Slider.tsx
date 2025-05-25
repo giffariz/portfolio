@@ -88,7 +88,6 @@ export const Slider = () => {
                                     <Badge
                                         key={index + 1}
                                         variant="default"
-                                        mr={5}
                                         className={classes.badge}
                                         display="flex"
                                     >

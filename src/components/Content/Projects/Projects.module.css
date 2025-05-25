@@ -1,0 +1,8 @@
+.associate {
+    font-size: var(--mantine-font-size-sm);
+    font-weight: 600;
+
+    @media (max-width: $mantine-breakpoint-xs) {
+        font-size: var(--mantine-font-size-xs);
+    }
+}

@@ -15,7 +15,7 @@ export const AboutMe = () => {
                     <Box className={classes.boxAvatar}>
                         <Box
                             component="img"
-                            src="/pic/aboutme.jpg"
+                            src="/pic/aboutme.webp"
                             className={classes.avatar}
                         />
                         <Box className={classes.avatarGradient} />
