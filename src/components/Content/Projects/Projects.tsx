@@ -34,7 +34,7 @@ export const Projects = () => {
                             stroke={4}
                             onClick={() => handleClick(index)}
                         />
-                        <div style={{ justifyItems: "end" }}>
+                        <div style={{ textAlign: "right" }}>
                             <Title order={1} m={0} tt={"uppercase"}>
                                 {item.name}
                             </Title>
