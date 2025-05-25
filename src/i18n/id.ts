@@ -52,18 +52,23 @@ const id = {
         title2: "Pemikiran",
         items: [
             {
-                name: "Web Sistem STAR AGIT",
+                name: "STAR",
+                associate: "PT Astra Graphia Information Technology",
                 description:
-                    "Sistem berbasis web yang dirancang untuk manajemen stok, laporan, dashboard, dan database promosi. Dibangun menggunakan React, TypeScript, dan GraphQL sebagai backend integrasi utama.",
-                tech: ["React", "TypeScript", "GraphQL"],
+                    "STAR (Sistem Terintegrasi Astra Motor) merupakan platform internal yang dikembangkan untuk menyatukan proses operasional secara efisien dan terstruktur dalam satu sistem terpadu.",
+                tech: ["React", "TypeScript", "Ant Design", "GraphQL"],
+                imgUrl: ["/pic/star/1.webp", "/pic/star/2.webp", "/pic/star/3.webp", "/pic/star/4.webp"],
             },
             {
-                name: "Web Portfolio Pribadi",
+                name: "Portfolio",
+                associate: "Giffari Zakawaly",
                 description:
-                    "Halaman portofolio interaktif yang menampilkan pengalaman, proyek, dan profil saya dalam dua bahasa. Dibuat menggunakan Next.js App Router, Mantine UI, dan fitur seperti dark mode, loading transition, serta pemilihan bahasa.",
-                tech: ["Next.js", "TypeScript", "Mantine", "i18n", "Dark Mode"],
+                    "Website personal sebagai sarana perkenalan, menampilkan pengalaman, proyek, dan keahlian secara interaktif. Dibuat untuk membangun koneksi dan membuka peluang kolaborasi.",
+                tech: ["Next", "TypeScript", "Mantine"],
+                imgUrl: ["/pic/portfolio/1.webp", "/pic/portfolio/2.webp", "/pic/portfolio/3.webp"],
             },
         ],
+        back: "Kembali",
     },
 
     about: {

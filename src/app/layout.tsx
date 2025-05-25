@@ -37,16 +37,16 @@ export const metadata: Metadata = {
     "Giffari",
     "Next.js Portfolio",
   ],
-  authors: [{ name: "Giffari Zakawaly", url: "https://giffari.vercel.app" }],
+  authors: [{ name: "Giffari Zakawaly", url: "https://giffariz.com" }],
   creator: "Giffari Zakawaly",
-  metadataBase: new URL("https://giffari.vercel.app"),
+  metadataBase: new URL("https://giffariz.com"),
   robots: { index: true, follow: true },
   icons: { icon: "/favicon.ico" },
   openGraph: {
     title: "Giffari Zakawaly - Frontend Developer Portfolio",
     description:
       "Frontend Developer dengan spesialisasi React & TypeScript.",
-    url: "https://giffari.vercel.app",
+    url: "https://giffariz.com",
     siteName: "Giffari Zakawaly - Frontend Developer Portfolio",
     images: [
       {

@@ -52,18 +52,23 @@ const en = {
         title2: "Thoughts",
         items: [
             {
-                name: "STAR AGIT Web System",
+                name: "STAR",
+                associate: "PT Astra Graphia Information Technology",
                 description:
-                    "A web-based system designed for managing stock, reporting, dashboards, and promotional databases. Built with React, TypeScript, and GraphQL as the main API integration layer.",
-                tech: ["React", "TypeScript", "GraphQL"],
+                    "STAR (Astra Motor Integrated System) is an internal platform developed to unify operational processes efficiently and systematically within a single integrated system.",
+                tech: ["React", "TypeScript", "Ant Design", "GraphQL"],
+                imgUrl: ["/pic/star/1.webp", "/pic/star/2.webp", "/pic/star/3.webp", "/pic/star/4.webp"],
             },
             {
-                name: "Personal Portfolio Website",
+                name: "Portfolio",
+                associate: "Giffari Zakawaly",
                 description:
-                    "An interactive portfolio page that showcases my experience, projects, and profile in two languages. Built with Next.js App Router, Mantine UI, and features like dark mode, animated loading, and language toggle.",
-                tech: ["Next.js", "TypeScript", "Mantine", "i18n", "Dark Mode"],
+                    "A personal website to introduce myself, showcasing experiences, projects, and skills in an interactive way. Created to build connections and open up collaboration opportunities.",
+                tech: ["Next", "TypeScript", "Mantine"],
+                imgUrl: ["/pic/portfolio/1.webp", "/pic/portfolio/2.webp", "/pic/portfolio/3.webp"],
             },
         ],
+        back: "Go Back",
     },
 
     about: {
