@@ -30,7 +30,7 @@
     font-weight: 600;
     font-size: calc(var(--mantine-font-size-md) * 1.5);
 
-    @media (max-width: $mantine-breakpoint-xs) {
+    @media (max-width: $mantine-breakpoint-md) {
         font-size: var(--mantine-font-size-sm);
     }
 }
@@ -38,7 +38,7 @@
 .period {
     font-size: var(--mantine-font-size-md);
 
-    @media (max-width: $mantine-breakpoint-xs) {
+    @media (max-width: $mantine-breakpoint-md) {
         font-size: var(--mantine-font-size-xs);
     }
 }
@@ -46,7 +46,7 @@
 .responsibilty {
     font-size: var(--mantine-font-size-lg);
     
-    @media (max-width: $mantine-breakpoint-xs) {
+    @media (max-width: $mantine-breakpoint-md) {
         font-size: var(--mantine-font-size-xs);
     }
 }
@@ -54,7 +54,7 @@
 .badge {
     font-size: var(--mantine-font-size-md);
 
-    @media (max-width: $mantine-breakpoint-xs) {
+    @media (max-width: $mantine-breakpoint-md) {
         font-size: var(--mantine-font-size-xs);
     }
 }

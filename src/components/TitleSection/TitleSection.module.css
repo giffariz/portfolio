@@ -3,11 +3,12 @@
     letter-spacing: -1px;
     color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
     margin-bottom: var(--mantine-spacing-lg);
+    margin-top: var(--mantine-spacing-xl);
     justify-self: center;
 
     @media (max-width: $mantine-breakpoint-sm) {
         font-size: 14px;
-        margin-top: var(--mantine-spacing-sm);
+        margin-top: var(--mantine-spacing-md);
         margin-bottom: 0;
     }
 }

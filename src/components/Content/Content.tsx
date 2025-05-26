@@ -20,7 +20,7 @@ export const Content = ({ onClickProjects, activeTab }: IContentProps) => {
                         <Flex
                             justify="center"
                             align="center"
-                            h="80dvh"
+                            h="90dvh"
                         >
                             <div style={styles}>
                                 <Home onClickProjects={onClickProjects} />
@@ -35,7 +35,7 @@ export const Content = ({ onClickProjects, activeTab }: IContentProps) => {
                         <Flex
                             justify="center"
                             align="center"
-                            h="80dvh"
+                            h="90dvh"
                         >
                             <div style={styles}>
                                 <Experience />
@@ -50,7 +50,7 @@ export const Content = ({ onClickProjects, activeTab }: IContentProps) => {
                         <Flex
                             justify="center"
                             align="center"
-                            h="80dvh"
+                            h="90dvh"
                         >
                             <div style={styles}>
                                 <Projects />
@@ -65,7 +65,7 @@ export const Content = ({ onClickProjects, activeTab }: IContentProps) => {
                         <Flex
                             justify="center"
                             align="center"
-                            h="80dvh"
+                            h="90dvh"
                         >
                             <div style={styles}>
                                 <AboutMe />
