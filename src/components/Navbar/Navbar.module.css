@@ -2,23 +2,12 @@
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
-    bottom: var(--mantine-spacing-xs);
+    min-width: 40dvw;
     z-index: 2;
     justify-content: space-between;
-    border-radius: 50px;
-
-    background: #ffffff;
-    box-shadow: inset 10px 10px 40px #cccccc,
-        inset -10px -10px 40px #ffffff;
-
-    @mixin dark {
-        background: #333333;
-        box-shadow: inset 10px 10px 40px #292929,
-            inset -10px -10px 40px #3d3d3d;
-    }
 
     @media (max-width: $mantine-breakpoint-xs) {
-        min-width: 90vw;
+        min-width: 100dvw;
     }
 }
 
@@ -35,6 +24,7 @@
     transition: color 500ms ease;
     color: var(--mantine-color-gray-7);
     gap: var(--mantine-spacing-xs);
+    justify-content: center;
 
     &[data-active] {
         color: var(--mantine-color-white);
