@@ -3,7 +3,7 @@
     width: 50dvw;
 
     @media (max-width: $mantine-breakpoint-md) {
-        width: 94dvw;
+        width: 100dvw;
     }
 }
 
@@ -22,7 +22,7 @@
     background: transparent;
 
     @media (max-width: $mantine-breakpoint-md) {
-        width: 94dvw;
+        width: 100dvw;
     }
 }
 
@@ -31,7 +31,7 @@
     font-size: calc(var(--mantine-font-size-md) * 1.5);
 
     @media (max-width: $mantine-breakpoint-xs) {
-        font-size: var(--mantine-font-size-md);
+        font-size: var(--mantine-font-size-sm);
     }
 }
 
@@ -47,7 +47,7 @@
     font-size: var(--mantine-font-size-lg);
     
     @media (max-width: $mantine-breakpoint-xs) {
-        font-size: var(--mantine-font-size-sm);
+        font-size: var(--mantine-font-size-xs);
     }
 }
 
