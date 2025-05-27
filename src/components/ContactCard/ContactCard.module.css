@@ -14,4 +14,5 @@
 
 .avatar {
     border: 2px solid var(--mantine-color-body);
+    pointer-events: none;
 }

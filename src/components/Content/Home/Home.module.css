@@ -1,13 +1,5 @@
-.wrapper {
-    position: relative;
-}
-
-.inner {
-    position: relative;
-    z-index: 1;
-}
-
 .title {
+    justify-self: center;
     text-align: center;
     font-weight: 400;
     font-size: 30px;

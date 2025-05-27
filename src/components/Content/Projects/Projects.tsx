@@ -1,6 +1,6 @@
 import { useLanguage } from "@/context/LanguageContext";
 import { TitleSection } from "@/components/TitleSection/TitleSection";
-import { ScrollArea, Title, Text, Group } from "@mantine/core";
+import { Title, Text, Group } from "@mantine/core";
 import { IconArrowUpRight } from "@tabler/icons-react";
 import { useState } from "react";
 import classes from "./Projects.module.css";
@@ -21,30 +21,23 @@ export const Projects = () => {
     return (
         <>
             <TitleSection title1={t.projects.title1} title2={t.projects.title2} />
-            <ScrollArea.Autosize
-                h={{ base: "65dvh", md: "50dvh" }}
-                w={{ base: "90dvw", md: "40dvw" }}
-                mt={"md"}
-                offsetScrollbars
-            >
-                {t.projects.items.map((item, index) => (
-                    <Group mt="md" justify="space-between" w={"100%"} key={index + 1}>
-                        <IconArrowUpRight
-                            size={25}
-                            stroke={4}
-                            onClick={() => handleClick(index)}
-                        />
-                        <div style={{ textAlign: "right" }}>
-                            <Title order={1} m={0} tt={"uppercase"}>
-                                {item.name}
-                            </Title>
-                            <Text m={0} c="dimmed" className={classes.associate}>
-                                {item.associate}
-                            </Text>
-                        </div>
-                    </Group>
-                ))}
-            </ScrollArea.Autosize>
+            {t.projects.items.map((item, index) => (
+                <Group mt="md" justify="space-between" w={"100%"} key={index + 1}>
+                    <IconArrowUpRight
+                        size={25}
+                        stroke={4}
+                        onClick={() => handleClick(index)}
+                    />
+                    <div style={{ textAlign: "right" }}>
+                        <Title order={1} m={0} tt={"uppercase"}>
+                            {item.name}
+                        </Title>
+                        <Text m={0} c="dimmed" className={classes.associate}>
+                            {item.associate}
+                        </Text>
+                    </div>
+                </Group>
+            ))}
             <Detail
                 opened={opened}
                 close={close}

@@ -12,6 +12,7 @@ const en = {
             {
                 role: "Frontend Developer",
                 company: "PT Astra Graphia Information Technology",
+                imgurl: "/pic/company/agit.webp",
                 period: "May 2022 - Present",
                 responsibilty: [
                     "Collaborated with Backend, QA, and Business teams to prepare upcoming features and break them into actionable tickets",
@@ -24,6 +25,7 @@ const en = {
             {
                 role: "WordPress Developer",
                 company: "TIMEO",
+                imgurl: "/pic/company/timeo.webp",
                 period: "May 2021 - August 2021",
                 responsibilty: [
                     "Redesign layout with attention to style and size of type, photographs, and graphics",
@@ -36,6 +38,7 @@ const en = {
             {
                 role: "WordPress Developer (Internship)",
                 company: "Diskominfo Kabupaten Malang",
+                imgurl: "/pic/company/kominfo.webp",
                 period: "January 2018 - February 2018",
                 responsibilty: [
                     "Redesign website of Puskesmas Kedungkandang",

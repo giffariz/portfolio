@@ -1,10 +1,10 @@
 "use client";
 import { Tabs, FloatingIndicator, Text, Flex } from "@mantine/core";
 import {
-    IconHomeFilled,
-    IconBriefcaseFilled,
-    IconCodeCircleFilled,
-    IconUserFilled,
+    IconSparkles,
+    IconMapRoute,
+    IconBrandReact,
+    IconUserQuestion,
 } from "@tabler/icons-react";
 import { useState } from "react";
 import classes from "./Navbar.module.css";
@@ -24,15 +24,15 @@ export const Navbar = ({ activeTab }: NavbarProps) => {
     };
 
     return (
-        <Tabs.List grow ref={setRootRef} className={classes.list} justify="center">
+        <Tabs.List grow ref={setRootRef} className={classes.list}>
             <Tabs.Tab
                 value="home"
                 ref={setControlRef("home")}
                 className={classes.tab}
             >
-                <Flex align="center" direction="column" gap={0}>
-                    <IconHomeFilled size={20} />
-                    <Text fw={500} size="xs">
+                <Flex align="center" direction="column">
+                    <IconSparkles size={20}/>
+                    <Text fw={500} size="sm">
                         Home
                     </Text>
                 </Flex>
@@ -42,9 +42,9 @@ export const Navbar = ({ activeTab }: NavbarProps) => {
                 ref={setControlRef("experience")}
                 className={classes.tab}
             >
-                <Flex align="center" direction="column" gap={0}>
-                    <IconBriefcaseFilled size={20} />
-                    <Text fw={500} size="xs">
+                <Flex align="center" direction="column">
+                    <IconMapRoute size={20}/>
+                    <Text fw={500} size="sm">
                         Experience
                     </Text>
                 </Flex>
@@ -54,9 +54,9 @@ export const Navbar = ({ activeTab }: NavbarProps) => {
                 ref={setControlRef("projects")}
                 className={classes.tab}
             >
-                <Flex align="center" direction="column" gap={0}>
-                    <IconCodeCircleFilled size={20} />
-                    <Text fw={500} size="xs">
+                <Flex align="center" direction="column">
+                    <IconBrandReact size={20}/>
+                    <Text fw={500} size="sm">
                         Projects
                     </Text>
                 </Flex>
@@ -66,9 +66,9 @@ export const Navbar = ({ activeTab }: NavbarProps) => {
                 ref={setControlRef("about")}
                 className={classes.tab}
             >
-                <Flex align="center" direction="column" gap={0}>
-                    <IconUserFilled size={20} />
-                    <Text fw={500} size="xs">
+                <Flex align="center" direction="column">
+                    <IconUserQuestion size={20}/>
+                    <Text fw={500} size="sm">
                         About
                     </Text>
                 </Flex>
@@ -78,7 +78,7 @@ export const Navbar = ({ activeTab }: NavbarProps) => {
                 target={activeTab ? controlsRefs[activeTab] : null}
                 parent={rootRef}
                 className={classes.indicator}
-                transitionDuration={500}
+                transitionDuration={300}
             />
         </Tabs.List>
     );

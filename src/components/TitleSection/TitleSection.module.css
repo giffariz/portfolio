@@ -8,7 +8,7 @@
 
     @media (max-width: $mantine-breakpoint-sm) {
         font-size: 14px;
-        margin-top: var(--mantine-spacing-md);
+        margin-top: var(--mantine-spacing-xs);
         margin-bottom: 0;
     }
 }
@@ -19,6 +19,6 @@
     line-height: 0.7;
 
     @media (max-width: $mantine-breakpoint-sm) {
-        font-size: 30px;
+        font-size: 34px;
     }
 }

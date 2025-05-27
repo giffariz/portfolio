@@ -12,6 +12,7 @@ const id = {
             {
                 role: "Frontend Developer",
                 company: "PT Astra Graphia Information Technology",
+                imgurl: "/pic/company/agit.webp",
                 period: "Mei 2022 - Sekarang",
                 responsibilty: [
                     "Bekerja sama dengan tim Backend, QA, dan Bisnis menyiapkan fitur baru dan membaginya menjadi tugas-tugas teknis",
@@ -24,6 +25,7 @@ const id = {
             {
                 role: "WordPress Developer",
                 company: "TIMEO",
+                imgurl: "/pic/company/timeo.webp",
                 period: "Mei 2021 - Agustus 2021",
                 responsibilty: [
                     "Mendesain ulang web dengan memperhatikan gaya teks, foto, dan elemen grafis",
@@ -36,6 +38,7 @@ const id = {
             {
                 role: "WordPress Developer (Magang)",
                 company: "Diskominfo Kabupaten Malang",
+                imgurl: "/pic/company/kominfo.webp",
                 period: "Januari 2018 - Februari 2018",
                 responsibilty: [
                     "Mendesain ulang website Puskesmas Kedungkandang",
