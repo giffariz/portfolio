@@ -1,6 +1,32 @@
+.item {
+    cursor: pointer;
+    padding: var(--mantine-spacing-md);
+    transition: all 300ms ease;
+    overflow: visible;
+    border: 1px solid initial;
+
+    svg {
+        position: absolute;
+        left: -5px;
+        top: -5px;
+        transition: all 300ms ease;
+        background: linear-gradient(to right, var(--mantine-color-blue-7), var(--mantine-color-cyan-6));
+        border-radius: 50%;
+        color: white;
+        padding: 8px;
+    }
+}
+
+.item:hover {
+    background-color: light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-7));
+    svg {
+        transform: rotate(45deg);
+    }
+}
+
 .associate {
     font-size: var(--mantine-font-size-sm);
-    font-weight: 600;
+    font-weight: 500;
 
     @media (max-width: $mantine-breakpoint-xs) {
         font-size: var(--mantine-font-size-xs);
