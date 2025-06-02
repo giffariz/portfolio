@@ -33,7 +33,7 @@ export default function ExperienceScrollWithDots() {
                             />
                         }
                     >
-                        <Card shadow="md" radius="md" withBorder w={{ md: "600px" }}>
+                        <Card shadow="md" radius="md" withBorder>
                             <Card.Section p={"md"}>
                                 <Flex justify="space-between" align="center" gap={20}>
                                     <Text className={classes.company}>{item.company}</Text>
@@ -44,26 +44,16 @@ export default function ExperienceScrollWithDots() {
                                     />
                                 </Flex>
                             </Card.Section>
-                            <Card.Section px={"md"}>
-                                <Text className={classes.role}>{item.role}</Text>
-                                <Text c="dimmed" className={classes.period}>
-                                    {item.period}
-                                </Text>
-                            </Card.Section>
-                            <Card.Section p={"md"}>
-                                <Group gap="xs">
-                                    {item.techStack.map((tech, index) => (
-                                        <Badge key={index + 1} variant="light" color="blue">
-                                            {tech}
-                                        </Badge>
-                                    ))}
-                                </Group>
-                            </Card.Section>
-                            <Card.Section px={"md"} pb={"md"}>
-                                <Accordion variant="contained" radius={"md"}>
+                            <Card.Section className={classes.responsibilitySection}>
+                                <Accordion variant="filled" className={classes.responsibilitySection}>
                                     <Accordion.Item value="detail">
-                                        <Accordion.Control>Detail</Accordion.Control>
-                                        <Accordion.Panel>
+                                        <Accordion.Control className={classes.responsibilitySection}>
+                                            <Text className={classes.role}>{item.role}</Text>
+                                            <Text c="dimmed" className={classes.period}>
+                                                {item.period}
+                                            </Text>
+                                        </Accordion.Control>
+                                        <Accordion.Panel className={classes.responsibilitySection}>
                                             <List>
                                                 {item.responsibilty.map((responsibilty, index) => (
                                                     <List.Item key={index + 1} pb={3} pr={15}>
@@ -76,6 +66,15 @@ export default function ExperienceScrollWithDots() {
                                         </Accordion.Panel>
                                     </Accordion.Item>
                                 </Accordion>
+                            </Card.Section>
+                            <Card.Section p={"md"}>
+                                <Group gap="xs">
+                                    {item.techStack.map((tech, index) => (
+                                        <Badge key={index + 1} variant="light" color="blue">
+                                            {tech}
+                                        </Badge>
+                                    ))}
+                                </Group>
                             </Card.Section>
                         </Card>
                     </Timeline.Item>

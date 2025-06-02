@@ -1,6 +1,6 @@
 import { useLanguage } from "@/context/LanguageContext";
 import { TitleSection } from "@/components/TitleSection/TitleSection";
-import { Title, Text, Group, Card } from "@mantine/core";
+import { Title, Text, Group, Card, Container } from "@mantine/core";
 import { IconRocket } from "@tabler/icons-react";
 import { useState } from "react";
 import classes from "./Projects.module.css";
@@ -21,32 +21,35 @@ export const Projects = () => {
     return (
         <>
             <TitleSection title1={t.projects.title1} title2={t.projects.title2} />
-            {t.projects.items.map((item, index) => (
-                <Card
-                    key={index + 1}
-                    mt="md"
-                    shadow="md"
-                    radius="md"
-                    p={0}
-                    withBorder
-                >
-                    <Group
-                        justify="flex-end"
-                        className={classes.item}
-                        onClick={() => handleClick(index)}
-                    >
-                        <IconRocket size={40} />
-                        <div style={{ textAlign: "right" }}>
-                            <Title order={1} m={0} tt={"uppercase"}>
-                                {item.name}
-                            </Title>
-                            <Text m={0} c="dimmed" className={classes.associate}>
-                                {item.associate}
-                            </Text>
-                        </div>
-                    </Group>
-                </Card>
-            ))}
+            <div className={classes.card}>
+                {t.projects.items.map((item, index) => (
+                    <Container key={index + 1} w={{ base: "100dvw", md: "50dvw" }}>
+                        <IconRocket size={40} className={classes.icondetail} />
+                        <Card
+                            key={index + 1}
+                            shadow="md"
+                            radius="md"
+                            p={0}
+                            className={classes.innerradius}
+                        >
+                            <Group
+                                justify="flex-end"
+                                className={classes.item}
+                                onClick={() => handleClick(index)}
+                            >
+                                <div style={{ textAlign: "right" }}>
+                                    <Title order={1} m={0} tt={"uppercase"}>
+                                        {item.name}
+                                    </Title>
+                                    <Text m={0} c="dimmed" className={classes.associate}>
+                                        {item.associate}
+                                    </Text>
+                                </div>
+                            </Group>
+                        </Card>
+                    </Container>
+                ))}
+            </div>
             <Detail
                 opened={opened}
                 close={close}

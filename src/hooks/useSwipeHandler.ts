@@ -19,6 +19,9 @@ export const useSwipeHandler = () => {
     };
 
     const handleTouchEnd = (e: TouchEvent) => {
+        const target = e.target as HTMLElement;
+        if (target.closest(".noSwipe")) return;
+
         if (!touchStartX.current || !touchStartY.current) return;
 
         const touchEndX = e.changedTouches[0].clientX;
@@ -46,31 +49,32 @@ export const useSwipeHandler = () => {
     const wheelCooldown = 200;
 
     const handleWheel = (e: WheelEvent) => {
-        const now = Date.now()
+        const target = e.target as HTMLElement;
+        if (target.closest(".noSwipe")) return;
 
-        if (now - lastWheelTime.current < wheelCooldown) {
-            return
-        }
+        const now = Date.now();
 
-        const isHorizontalScroll = Math.abs(e.deltaX) > Math.abs(e.deltaY)
-        const isShiftScroll = e.shiftKey && Math.abs(e.deltaY) > 0
+        if (now - lastWheelTime.current < wheelCooldown) return;
+
+        const isHorizontalScroll = Math.abs(e.deltaX) > Math.abs(e.deltaY);
+        const isShiftScroll = e.shiftKey && Math.abs(e.deltaY) > 0;
 
         if (isHorizontalScroll || isShiftScroll) {
-            e.preventDefault()
-            const delta = isHorizontalScroll ? e.deltaX : e.deltaY
-            const currentIndex = tabs.findIndex((tab) => tab.id === activeTab)
+            e.preventDefault();
+            const delta = isHorizontalScroll ? e.deltaX : e.deltaY;
+            const currentIndex = tabs.findIndex((tab) => tab.id === activeTab);
 
             if (Math.abs(delta) > 10) {
                 if (delta > 0 && currentIndex < tabs.length - 1) {
-                    setActiveTab(tabs[currentIndex + 1].id)
-                    lastWheelTime.current = now
+                    setActiveTab(tabs[currentIndex + 1].id);
+                    lastWheelTime.current = now;
                 } else if (delta < 0 && currentIndex > 0) {
-                    setActiveTab(tabs[currentIndex - 1].id)
-                    lastWheelTime.current = now
+                    setActiveTab(tabs[currentIndex - 1].id);
+                    lastWheelTime.current = now;
                 }
             }
         }
-    }
+    };
 
     //Event Listeners
     useEffect(() => {
@@ -88,15 +92,15 @@ export const useSwipeHandler = () => {
     }, [activeTab]);
 
     useEffect(() => {
-        const handleWheelEvent = (e: WheelEvent) => handleWheel(e)
+        const handleWheelEvent = (e: WheelEvent) => handleWheel(e);
 
-        document.addEventListener("wheel", handleWheelEvent, { passive: false })
+        document.addEventListener("wheel", handleWheelEvent, { passive: false });
 
         return () => {
-            document.removeEventListener("wheel", handleWheelEvent)
-        }
+            document.removeEventListener("wheel", handleWheelEvent);
+        };
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [activeTab])
+    }, [activeTab]);
 
     return {
         activeTab,

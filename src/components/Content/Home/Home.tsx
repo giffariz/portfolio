@@ -97,6 +97,7 @@ export default function Home({ onClickProjects }: Readonly<IHomeProps>) {
             </div>
 
             <Drawer
+                className="noSwipe"
                 position="bottom"
                 opened={opened}
                 onClose={close}
