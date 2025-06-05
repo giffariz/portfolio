@@ -11,6 +11,7 @@ This is my personal portfolio website, designed to introduce who I am, what I do
 - Language toggle (Indonesia / English)
 - Theme toggle (Light / Dark)
 - Fully responsive across screen sizes
+- Swipe or Horizontal Scroll to navigate between tabs
 
 ---
 
