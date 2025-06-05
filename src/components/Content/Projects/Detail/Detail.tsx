@@ -67,61 +67,64 @@ export const Detail = (props: Readonly<DetailProps>) => {
                     {props.selectedProject?.associate}
                 </Text>
             </div>
-            <Stack
-                align="flex-end"
-                mb="80px"
-                w={{ base: "90dvw", md: "40dvw" }}
-                style={{ justifySelf: "center" }}
-                mt={{ base: "md", md: "xl" }}
-            >
-                <Group
-                    className={classes.cardButton}
-                    align="center"
-                    justify="center"
-                    onClick={open}
-                >
-                    <IconLibraryPhoto />
-                </Group>
-                <Card
+
+            <div style={{ display: "flex", justifyContent: "center" }}>
+                <Stack
+                    align="flex-end"
+                    mb="80px"
                     w={{ base: "90dvw", md: "40dvw" }}
-                    shadow="md"
-                    padding="md"
-                    withBorder
-                    className={classes.card}
+                    style={{ justifySelf: "center" }}
+                    mt={{ base: "md", md: "xl" }}
                 >
-                    <Card.Section withBorder>
-                        <Image
-                            src={props.selectedProject?.imgUrl[0]}
-                            alt={props.selectedProject?.name + " image"}
-                            fit="cover"
-                        />
-                    </Card.Section>
-                    <Card.Section p="md" withBorder>
-                        <Text size={isNotPc ? "md" : "xl"}>
-                            {props.selectedProject?.description}
-                        </Text>
-                    </Card.Section>
-                    <Card.Section p="md">
-                        {props.selectedProject?.tech.map((tech, index) => (
-                            <Badge
-                                key={index + 1}
-                                color="blue"
-                                variant="light"
-                                size={isNotPc ? "lg" : "xl"}
-                                mr={"xs"}
-                                mb={"xs"}
-                            >
-                                {tech}
-                            </Badge>
-                        ))}
-                    </Card.Section>
-                </Card>
-            </Stack>
+                    <Group
+                        className={classes.cardButton}
+                        align="center"
+                        justify="center"
+                        onClick={open}
+                    >
+                        <IconLibraryPhoto />
+                    </Group>
+                    <Card
+                        w={{ base: "90dvw", md: "40dvw" }}
+                        shadow="md"
+                        padding="md"
+                        withBorder
+                        className={classes.card}
+                    >
+                        <Card.Section withBorder>
+                            <Image
+                                src={props.selectedProject?.imgUrl[0]}
+                                alt={props.selectedProject?.name + " image"}
+                                fit="cover"
+                            />
+                        </Card.Section>
+                        <Card.Section p="md" withBorder>
+                            <Text size={isNotPc ? "md" : "xl"}>
+                                {props.selectedProject?.description}
+                            </Text>
+                        </Card.Section>
+                        <Card.Section p="md">
+                            {props.selectedProject?.tech.map((tech, index) => (
+                                <Badge
+                                    key={index + 1}
+                                    color="blue"
+                                    variant="light"
+                                    size={isNotPc ? "lg" : "xl"}
+                                    mr={"xs"}
+                                    mb={"xs"}
+                                >
+                                    {tech}
+                                </Badge>
+                            ))}
+                        </Card.Section>
+                    </Card>
+                </Stack>
+            </div>
+            
             <Affix
-                position={{ bottom: 0, right: 0 }}
                 w={"100%"}
                 h={"60px"}
-                style={{ alignContent: "center" }}
+                style={{ display: "flex", alignItems: "center", justifyContent: "flex-end" }}
                 bg={
                     "light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6))"
                 }

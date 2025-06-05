@@ -24,62 +24,64 @@ export const Navbar = ({ activeTab }: NavbarProps) => {
     };
 
     return (
-        <Tabs.List grow ref={setRootRef} className={classes.list}>
-            <Tabs.Tab
-                value="home"
-                ref={setControlRef("home")}
-                className={classes.tab}
-            >
-                <Flex align="center" direction="column">
-                    <IconSparkles size={20}/>
-                    <Text fw={500} size="sm">
-                        Home
-                    </Text>
-                </Flex>
-            </Tabs.Tab>
-            <Tabs.Tab
-                value="experience"
-                ref={setControlRef("experience")}
-                className={classes.tab}
-            >
-                <Flex align="center" direction="column">
-                    <IconMapRoute size={20}/>
-                    <Text fw={500} size="sm">
-                        Experience
-                    </Text>
-                </Flex>
-            </Tabs.Tab>
-            <Tabs.Tab
-                value="projects"
-                ref={setControlRef("projects")}
-                className={classes.tab}
-            >
-                <Flex align="center" direction="column">
-                    <IconBrandReact size={20}/>
-                    <Text fw={500} size="sm">
-                        Projects
-                    </Text>
-                </Flex>
-            </Tabs.Tab>
-            <Tabs.Tab
-                value="about"
-                ref={setControlRef("about")}
-                className={classes.tab}
-            >
-                <Flex align="center" direction="column">
-                    <IconUserQuestion size={20}/>
-                    <Text fw={500} size="sm">
-                        About
-                    </Text>
-                </Flex>
-            </Tabs.Tab>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+            <Tabs.List grow ref={setRootRef} className={classes.list}>
+                <Tabs.Tab
+                    value="home"
+                    ref={setControlRef("home")}
+                    className={classes.tab}
+                >
+                    <Flex align="center" direction="column">
+                        <IconSparkles size={20} />
+                        <Text fw={500} size="sm">
+                            Home
+                        </Text>
+                    </Flex>
+                </Tabs.Tab>
+                <Tabs.Tab
+                    value="experience"
+                    ref={setControlRef("experience")}
+                    className={classes.tab}
+                >
+                    <Flex align="center" direction="column">
+                        <IconMapRoute size={20} />
+                        <Text fw={500} size="sm">
+                            Experience
+                        </Text>
+                    </Flex>
+                </Tabs.Tab>
+                <Tabs.Tab
+                    value="projects"
+                    ref={setControlRef("projects")}
+                    className={classes.tab}
+                >
+                    <Flex align="center" direction="column">
+                        <IconBrandReact size={20} />
+                        <Text fw={500} size="sm">
+                            Projects
+                        </Text>
+                    </Flex>
+                </Tabs.Tab>
+                <Tabs.Tab
+                    value="about"
+                    ref={setControlRef("about")}
+                    className={classes.tab}
+                >
+                    <Flex align="center" direction="column">
+                        <IconUserQuestion size={20} />
+                        <Text fw={500} size="sm">
+                            About
+                        </Text>
+                    </Flex>
+                </Tabs.Tab>
 
-            <FloatingIndicator
-                target={activeTab ? controlsRefs[activeTab] : null}
-                parent={rootRef}
-                className={classes.indicator}
-                transitionDuration={300}
-            />
-        </Tabs.List>
+                <FloatingIndicator
+                    target={activeTab ? controlsRefs[activeTab] : null}
+                    parent={rootRef}
+                    className={classes.indicator}
+                    transitionDuration={300}
+                />
+            </Tabs.List>
+        </div>
     );
 };

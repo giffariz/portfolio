@@ -1,6 +1,6 @@
 .list {
     width: 40dvw;
-    justify-self: center;
+    left: auto;
     z-index: 2;
 
     @media (max-width: $mantine-breakpoint-md) {

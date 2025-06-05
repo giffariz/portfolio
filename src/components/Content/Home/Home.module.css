@@ -1,5 +1,4 @@
 .title {
-    justify-self: center;
     text-align: center;
     font-weight: 400;
     font-size: 30px;
@@ -25,7 +24,6 @@
 
 .description {
     text-align: center;
-    justify-self: center;
 
     @media (max-width: $mantine-breakpoint-xs) {
         width: 80%;

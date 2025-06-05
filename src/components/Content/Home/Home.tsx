@@ -26,24 +26,26 @@ export default function Home({ onClickProjects }: Readonly<IHomeProps>) {
 
     return (
         <>
-            <Title className={classes.title} w={"80%"}>
-                <Text
-                    component="span"
-                    className={classes.highlight + " " + leagueSpartan.className}
-                    inherit
-                    variant="gradient"
-                    gradient={{ from: 'blue', to: 'cyan' }}
-                >
-                    {t.home.greeting}
-                </Text><br />
-                <Text
-                    component="span"
-                    className={classes.highlight + " " + rockSalt.className}
-                    inherit
-                >
-                    Frontend Developer
-                </Text>
-            </Title>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+                <Title className={classes.title} w={"80%"}>
+                    <Text
+                        component="span"
+                        className={classes.highlight + " " + leagueSpartan.className}
+                        inherit
+                        variant="gradient"
+                        gradient={{ from: 'blue', to: 'cyan' }}
+                    >
+                        {t.home.greeting}
+                    </Text><br />
+                    <Text
+                        component="span"
+                        className={classes.highlight + " " + rockSalt.className}
+                        inherit
+                    >
+                        Frontend Developer
+                    </Text>
+                </Title>
+            </div>
 
             <Container p={0} size={600} mt={30}>
                 <Text size="lg" c="dimmed" className={classes.description}>

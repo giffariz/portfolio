@@ -42,8 +42,8 @@ export const AboutMe = () => {
                     cols={{ base: 1, md: 2 }}
                     spacing={{ base: "xs", md: "md" }}
                 >
-                    <div>
-                        <Box className={classes.boxAvatar}>
+                    <div style={{ display: "flex", justifyContent: "flex-end", alignItems: "flex-end" }}>
+                        <Box className={classes.boxAvatar} w={"100%"}>
                             <Box
                                 component="img"
                                 src="/pic/aboutme.webp"
