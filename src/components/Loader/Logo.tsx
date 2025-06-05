@@ -1,13 +1,20 @@
 import { Box } from "@mantine/core";
 
-export const Logo = () => {
+interface ILogoProps {
+	size: string | number;
+	animate: boolean;
+}
+
+export const Logo = (
+	{ size, animate }: ILogoProps = { size: 100, animate: true }
+) => {
 	return (
-		<Box w={"200px"}>
+		<Box w={size}>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 496 496"
-				fill="none"
-				stroke="currentColor"
+				fill={animate ? "none" : "currentColor"}
+				stroke={animate ? "currentColor" : "none"}
 				strokeWidth={10}
 			>
 				<defs>
@@ -70,11 +77,15 @@ export const Logo = () => {
 						C181.246887,372.426422 182.540833,373.869934 186.013916,373.685120 
 						C189.503128,373.499481 193.010117,373.647919 197.007904,373.649719 
 						z"
-					style={{
-						strokeDasharray: 500,
-						strokeDashoffset: 500,
-						animation: "dashDraw 3s ease-in-out infinite",
-					}}
+					style={
+						!animate
+							? {}
+							: {
+								strokeDasharray: 500,
+								strokeDashoffset: 500,
+								animation: "dashDraw 3s ease-in-out infinite",
+							}
+					}
 				/>
 				<path
 					d="
@@ -85,12 +96,17 @@ export const Logo = () => {
 						C366.482727,396.824524 362.845093,408.081879 353.804352,413.749512 
 						C352.542389,414.540710 351.145935,415.117371 349.431091,415.930328 
 						z"
-					stroke="url(#gradient)"
-					style={{
-						strokeDasharray: 200,
-						strokeDashoffset: 200,
-						animation: "dashDraw 3s ease-in-out infinite",
-					}}
+					fill={animate ? "none" : "url(#gradient)"}
+					stroke={animate ? "url(#gradient)" : "none"}
+					style={
+						!animate
+							? {}
+							: {
+								strokeDasharray: 200,
+								strokeDashoffset: 200,
+								animation: "dashDraw 3s ease-in-out infinite",
+							}
+					}
 				/>
 				<path
 					d="
@@ -101,12 +117,17 @@ export const Logo = () => {
 						C152.856216,84.152527 160.843597,83.917168 168.514435,87.158920 
 						C175.637589,90.169212 180.028854,95.983475 180.554840,104.548141 
 						z"
-					stroke="url(#gradient)"
-					style={{
-						strokeDasharray: 200,
-						strokeDashoffset: 200,
-						animation: "dashDraw 3s ease-in-out infinite",
-					}}
+					fill={animate ? "none" : "url(#gradient)"}
+					stroke={animate ? "url(#gradient)" : "none"}
+					style={
+						!animate
+							? {}
+							: {
+								strokeDasharray: 200,
+								strokeDashoffset: 200,
+								animation: "dashDraw 3s ease-in-out infinite",
+							}
+					}
 				/>
 			</svg>
 		</Box>

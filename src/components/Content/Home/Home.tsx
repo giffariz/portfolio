@@ -26,87 +26,84 @@ export default function Home({ onClickProjects }: Readonly<IHomeProps>) {
 
     return (
         <>
-            <Container className={classes.wrapper} size={"lg"}>
-                <div className={classes.inner}>
-                    <Title className={classes.title} w={"100%"}>
-                        <Text
-                            component="span"
-                            className={classes.highlight + " " + leagueSpartan.className}
-                            inherit
-                            variant="gradient"
-                            gradient={{ from: 'blue', to: 'cyan' }}
-                        >
-                            {t.home.greeting}
-                        </Text><br />
-                        <Text
-                            component="span"
-                            className={classes.highlight + " " + rockSalt.className}
-                            inherit
-                        >
-                            Frontend Developer
-                        </Text>
-                    </Title>
+            <Title className={classes.title} w={"80%"}>
+                <Text
+                    component="span"
+                    className={classes.highlight + " " + leagueSpartan.className}
+                    inherit
+                    variant="gradient"
+                    gradient={{ from: 'blue', to: 'cyan' }}
+                >
+                    {t.home.greeting}
+                </Text><br />
+                <Text
+                    component="span"
+                    className={classes.highlight + " " + rockSalt.className}
+                    inherit
+                >
+                    Frontend Developer
+                </Text>
+            </Title>
 
-                    <Container p={0} size={600} mt={30}>
-                        <Text size="lg" c="dimmed" className={classes.description}>
-                            {t.home.shortDescription}
-                        </Text>
-                    </Container>
-
-                    <div className={classes.controls}>
-                        <Button
-                            className={classes.control}
-                            size="lg"
-                            radius={"xl"}
-                            variant="default"
-                            color="gray"
-                            onClick={onClickProjects}
-                        >
-                            View Projects
-                            <IconCode
-                                size={64}
-                                style={{
-                                    position: 'absolute',
-                                    right: -24,
-                                    top: '50%',
-                                    transform: 'translateY(-50%)',
-                                    opacity: 0.1,
-                                    pointerEvents: 'none',
-                                }}
-                            />
-                        </Button>
-                        <Button
-                            className={classes.control}
-                            size="lg"
-                            radius={"xl"}
-                            onClick={open}
-                            variant="gradient"
-                            gradient={{ from: 'blue', to: 'cyan', deg: 90 }}
-                        >
-                            Profile Card
-                            <IconUsers
-                                size={64}
-                                style={{
-                                    position: 'absolute',
-                                    right: -24,
-                                    top: '50%',
-                                    transform: 'translateY(-50%)',
-                                    opacity: 0.2,
-                                    pointerEvents: 'none',
-                                }}
-                            />
-                        </Button>
-                    </div>
-                </div>
+            <Container p={0} size={600} mt={30}>
+                <Text size="lg" c="dimmed" className={classes.description}>
+                    {t.home.shortDescription}
+                </Text>
             </Container>
 
+            <div className={classes.controls}>
+                <Button
+                    className={classes.control}
+                    size="lg"
+                    radius={"xl"}
+                    variant="default"
+                    color="gray"
+                    onClick={onClickProjects}
+                >
+                    View Projects
+                    <IconCode
+                        size={64}
+                        style={{
+                            position: 'absolute',
+                            right: -24,
+                            top: '50%',
+                            transform: 'translateY(-50%)',
+                            opacity: 0.1,
+                            pointerEvents: 'none',
+                        }}
+                    />
+                </Button>
+                <Button
+                    className={classes.control}
+                    size="lg"
+                    radius={"xl"}
+                    onClick={open}
+                    variant="gradient"
+                    gradient={{ from: 'blue', to: 'cyan', deg: 90 }}
+                >
+                    Profile Card
+                    <IconUsers
+                        size={64}
+                        style={{
+                            position: 'absolute',
+                            right: -24,
+                            top: '50%',
+                            transform: 'translateY(-50%)',
+                            opacity: 0.2,
+                            pointerEvents: 'none',
+                        }}
+                    />
+                </Button>
+            </div>
+
             <Drawer
+                className="noSwipe"
                 position="bottom"
                 opened={opened}
                 onClose={close}
                 transitionProps={{
                     transition: "slide-up",
-                    duration: 500,
+                    duration: 300,
                     timingFunction: "ease",
                 }}
                 withCloseButton={false}

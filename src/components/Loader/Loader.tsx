@@ -21,7 +21,7 @@ export const Loader = () => {
   if (loading)
     return (
       <Center className={classes.loadContainer}>
-        <Logo />
+        <Logo animate size={200}/>
       </Center>
     );
 

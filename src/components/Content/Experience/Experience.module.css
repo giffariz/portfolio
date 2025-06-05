@@ -1,0 +1,53 @@
+.image {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0);
+    pointer-events: none;
+
+    @mixin dark {
+        filter: brightness(0) invert(1);
+    }
+
+    @media (max-width: $mantine-breakpoint-md) {
+        height: 60px;
+    }
+}
+
+.company {
+    font-weight: 700;
+    font-size: var(--mantine-font-size-xl);
+    text-transform: uppercase;
+    
+    @media (max-width: $mantine-breakpoint-md) {
+        font-size: var(--mantine-font-size-sm);
+    }
+}
+
+.role {
+    font-size: var(--mantine-font-size-md);
+    
+    @media (max-width: $mantine-breakpoint-md) {
+        font-size: var(--mantine-font-size-sm);
+    }
+}
+
+.period {
+    font-size: var(--mantine-font-size-md);
+    
+    @media (max-width: $mantine-breakpoint-md) {
+        font-size: var(--mantine-font-size-sm);
+    }
+}
+
+.responsibilitySection {
+    background: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-7));
+}
+
+.responsibilty {
+    font-size: var(--mantine-font-size-md);
+    
+    @media (max-width: $mantine-breakpoint-md) {
+        font-size: var(--mantine-font-size-sm);
+    }
+}

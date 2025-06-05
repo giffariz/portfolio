@@ -15,13 +15,13 @@ export const Content = ({ onClickProjects, activeTab }: IContentProps) => {
         <>
             <Dots />
             <Tabs.Panel value="home">
-                <Transition mounted={activeTab === "home"} transition="fade" duration={400}>
+                <Transition
+                    mounted={activeTab === "home"}
+                    transition="fade"
+                    duration={300}
+                >
                     {(styles) => (
-                        <Flex
-                            justify="center"
-                            align="center"
-                            h="90dvh"
-                        >
+                        <Flex justify="center">
                             <div style={styles}>
                                 <Home onClickProjects={onClickProjects} />
                             </div>
@@ -30,13 +30,13 @@ export const Content = ({ onClickProjects, activeTab }: IContentProps) => {
                 </Transition>
             </Tabs.Panel>
             <Tabs.Panel value="experience">
-                <Transition mounted={activeTab === "experience"} transition="fade" duration={400}>
+                <Transition
+                    mounted={activeTab === "experience"}
+                    transition="fade"
+                    duration={300}
+                >
                     {(styles) => (
-                        <Flex
-                            justify="center"
-                            align="center"
-                            h="90dvh"
-                        >
+                        <Flex justify="center">
                             <div style={styles}>
                                 <Experience />
                             </div>
@@ -45,13 +45,13 @@ export const Content = ({ onClickProjects, activeTab }: IContentProps) => {
                 </Transition>
             </Tabs.Panel>
             <Tabs.Panel value="projects">
-                <Transition mounted={activeTab === "projects"} transition="fade" duration={400}>
+                <Transition
+                    mounted={activeTab === "projects"}
+                    transition="fade"
+                    duration={300}
+                >
                     {(styles) => (
-                        <Flex
-                            justify="center"
-                            align="center"
-                            h="90dvh"
-                        >
+                        <Flex justify="center">
                             <div style={styles}>
                                 <Projects />
                             </div>
@@ -60,13 +60,13 @@ export const Content = ({ onClickProjects, activeTab }: IContentProps) => {
                 </Transition>
             </Tabs.Panel>
             <Tabs.Panel value="about">
-                <Transition mounted={activeTab === "about"} transition="fade" duration={400}>
+                <Transition
+                    mounted={activeTab === "about"}
+                    transition="fade"
+                    duration={300}
+                >
                     {(styles) => (
-                        <Flex
-                            justify="center"
-                            align="center"
-                            h="90dvh"
-                        >
+                        <Flex justify="center">
                             <div style={styles}>
                                 <AboutMe />
                             </div>

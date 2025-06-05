@@ -1,20 +1,5 @@
-.wrapper {
-    position: relative;
-    padding-top: 80px;
-    padding-bottom: 80px;
-
-    @media (max-width: $mantine-breakpoint-lg) {
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-}
-
-.inner {
-    position: relative;
-    z-index: 1;
-}
-
 .title {
+    justify-self: center;
     text-align: center;
     font-weight: 400;
     font-size: 30px;
@@ -23,7 +8,7 @@
     margin-bottom: var(--mantine-spacing-xs);
     font-family: Outfit, var(--mantine-font-family);
 
-    @media (max-width: $mantine-breakpoint-xs) {
+    @media (max-width: $mantine-breakpoint-lg) {
         font-size: 20px;
     }
 }
@@ -40,9 +25,11 @@
 
 .description {
     text-align: center;
+    justify-self: center;
 
     @media (max-width: $mantine-breakpoint-xs) {
-        font-size: var(--mantine-font-size-md);
+        width: 80%;
+        font-size: var(--mantine-font-size-sm);
     }
 }
 

@@ -1,21 +1,13 @@
 "use client";
+import { Tabs, FloatingIndicator, Text, Flex } from "@mantine/core";
 import {
-    Tabs,
-    Center,
-    FloatingIndicator,
-    Divider,
-    Text,
-} from "@mantine/core";
-import {
-    IconHomeFilled,
-    IconBriefcaseFilled,
-    IconCodeCircleFilled,
-    IconUserFilled,
+    IconSparkles,
+    IconMapRoute,
+    IconBrandReact,
+    IconUserQuestion,
 } from "@tabler/icons-react";
 import { useState } from "react";
 import classes from "./Navbar.module.css";
-import { ThemeToggle } from "../ThemeToggle/ThemeToggle";
-import LanguageSelector from "../LanguageSelector/LanguageSelector";
 
 interface NavbarProps {
     activeTab: string | null;
@@ -32,50 +24,62 @@ export const Navbar = ({ activeTab }: NavbarProps) => {
     };
 
     return (
-        <Tabs.List ref={setRootRef} className={classes.list}>
-            <Tabs.Tab value="home" ref={setControlRef("home")} className={classes.tab}>
-                <Center inline>
-                    <IconHomeFilled size={20} className="mantine-hidden-from-md" />
-                    <Text fw={500} ml={5} visibleFrom="md">
+        <Tabs.List grow ref={setRootRef} className={classes.list}>
+            <Tabs.Tab
+                value="home"
+                ref={setControlRef("home")}
+                className={classes.tab}
+            >
+                <Flex align="center" direction="column">
+                    <IconSparkles size={20}/>
+                    <Text fw={500} size="sm">
                         Home
                     </Text>
-                </Center>
+                </Flex>
             </Tabs.Tab>
-            <Tabs.Tab value="experience" ref={setControlRef("experience")} className={classes.tab}>
-                <Center inline>
-                    <IconBriefcaseFilled size={20} className="mantine-hidden-from-md" />
-                    <Text fw={500} ml={5} visibleFrom="md">
+            <Tabs.Tab
+                value="experience"
+                ref={setControlRef("experience")}
+                className={classes.tab}
+            >
+                <Flex align="center" direction="column">
+                    <IconMapRoute size={20}/>
+                    <Text fw={500} size="sm">
                         Experience
                     </Text>
-                </Center>
+                </Flex>
             </Tabs.Tab>
-            <Tabs.Tab value="projects" ref={setControlRef("projects")} className={classes.tab}>
-                <Center inline>
-                    <IconCodeCircleFilled size={20} className="mantine-hidden-from-md" />
-                    <Text fw={500} ml={5} visibleFrom="md">
+            <Tabs.Tab
+                value="projects"
+                ref={setControlRef("projects")}
+                className={classes.tab}
+            >
+                <Flex align="center" direction="column">
+                    <IconBrandReact size={20}/>
+                    <Text fw={500} size="sm">
                         Projects
                     </Text>
-                </Center>
+                </Flex>
             </Tabs.Tab>
-            <Tabs.Tab value="about" ref={setControlRef("about")} className={classes.tab}>
-                <Center inline>
-                    <IconUserFilled size={20} className="mantine-hidden-from-md" />
-                    <Text fw={500} ml={5} visibleFrom="md">
+            <Tabs.Tab
+                value="about"
+                ref={setControlRef("about")}
+                className={classes.tab}
+            >
+                <Flex align="center" direction="column">
+                    <IconUserQuestion size={20}/>
+                    <Text fw={500} size="sm">
                         About
                     </Text>
-                </Center>
+                </Flex>
             </Tabs.Tab>
 
             <FloatingIndicator
                 target={activeTab ? controlsRefs[activeTab] : null}
                 parent={rootRef}
                 className={classes.indicator}
-                transitionDuration={500}
+                transitionDuration={300}
             />
-
-            <Divider orientation="vertical" size={"sm"} mr={10} />
-            <LanguageSelector />
-            <ThemeToggle />
         </Tabs.List>
     );
 };

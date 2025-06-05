@@ -1,23 +1,21 @@
+"use client";
 import {
-    AspectRatio,
     Modal,
-    Image,
     Button,
     Title,
     Text,
-    Grid,
-    Group,
-    ActionIcon,
     Badge,
-    Divider,
+    Affix,
+    Card,
+    Image,
+    Group,
+    Stack,
 } from "@mantine/core";
-import { useMediaQuery } from "@mantine/hooks";
-import {
-    IconArrowBadgeLeftFilled,
-    IconArrowBadgeRightFilled,
-    IconArrowNarrowLeft,
-} from "@tabler/icons-react";
-import { useEffect, useState } from "react";
+import { useDisclosure, useMediaQuery } from "@mantine/hooks";
+import { IconArrowNarrowLeft, IconLibraryPhoto } from "@tabler/icons-react";
+import classes from "./Detail.module.css";
+import { PhotoSlider } from "react-photo-view";
+import { DataType } from "react-photo-view/dist/types";
 
 interface ProjectDetail {
     name: string;
@@ -37,39 +35,31 @@ interface DetailProps {
 export const Detail = (props: Readonly<DetailProps>) => {
     const isNotPc = useMediaQuery("(max-width: 64em)");
 
-    const [index, setIndex] = useState(0);
-
-    const handleNext = () => {
-        return index + 1 === props.selectedProject?.imgUrl.length ? setIndex(0) : setIndex(index + 1);
-    };
-
-    const handlePrev = () => {
-        return index - 1 < 0 ? setIndex(props.selectedProject!.imgUrl.length - 1) : setIndex(index - 1);
-    };
-
-    useEffect(() => {
-        setIndex(0);
-    }, [props.selectedProject]);
+    const [opened, { open, close }] = useDisclosure(false);
 
     return (
         <Modal
+            className="noSwipe"
             opened={props.opened}
             onClose={props.close}
-            fullScreen={isNotPc}
-            size={"100%"}
-            radius="xl"
-            centered
+            fullScreen
+            closeOnEscape={false}
             withCloseButton={false}
-            transitionProps={{ transition: "fade", duration: 300 }}
-            overlayProps={{
-                style: {
-                    backdropFilter: 'blur(6px)',
-                    WebkitBackdropFilter: 'blur(6px)',
-                    backgroundColor: 'rgba(0, 0, 0, 0.4)',
-                },
-            }}
+            transitionProps={{ transition: "slide-up", duration: 200 }}
         >
-            <div style={{ justifyItems: "center" }}>
+            <PhotoSlider
+                images={
+                    props.selectedProject?.imgUrl.map((item) => ({
+                        src: item,
+                        key: item,
+                    })) as DataType[]
+                }
+                visible={opened}
+                onClose={close}
+                className="noSwipe"
+            />
+
+            <div style={{ textAlign: "center" }}>
                 <Title order={1} m={0} tt={"uppercase"} fw={900}>
                     {props.selectedProject?.name}
                 </Title>
@@ -77,76 +67,65 @@ export const Detail = (props: Readonly<DetailProps>) => {
                     {props.selectedProject?.associate}
                 </Text>
             </div>
-            <Grid
-                mt={{ base: "md", md: "xl" }}
-                w={{ base: "100%", lg: "80%" }}
+            <Stack
+                align="flex-end"
+                mb="80px"
+                w={{ base: "90dvw", md: "40dvw" }}
                 style={{ justifySelf: "center" }}
+                mt={{ base: "md", md: "xl" }}
             >
-                <Grid.Col span={{ base: 12, md: 8 }}>
-                    <AspectRatio ratio={16 / 9}>
-                        <Image w={"100%"} radius="md" src={props.selectedProject?.imgUrl[index]} alt="Project Img" />
-                    </AspectRatio>
-                    <Group justify="center" mt="xs" gap="xs">
-                        <ActionIcon
-                            onClick={handlePrev}
-                            size={"md"}
-                            radius={"xl"}
-                            variant="gradient"
-                            gradient={{ from: "blue", to: "cyan", deg: 90 }}
-                        >
-                            <IconArrowBadgeLeftFilled size={20} />
-                        </ActionIcon>
-                        {props.selectedProject?.imgUrl.map((_, i) => (
-                            <Button
-                                key={i + 1}
-                                size="sm"
-                                variant={i === index ? "gradient" : "default"}
-                                gradient={
-                                    i === index ? { from: "blue", to: "cyan" } : undefined
-                                }
-                                style={{ ...(i !== index && { padding: 0 }) }}
-                                radius="xl"
-                                onClick={() => setIndex(i)}
-                                w={"10px"}
-                                h={"10px"}
-                                styles={{
-                                    root: {
-                                        transition: "all 0.3s ease-in-out",
-                                    },
-                                }}
-                            />
+                <Group
+                    className={classes.cardButton}
+                    align="center"
+                    justify="center"
+                    onClick={open}
+                >
+                    <IconLibraryPhoto />
+                </Group>
+                <Card
+                    w={{ base: "90dvw", md: "40dvw" }}
+                    shadow="md"
+                    padding="md"
+                    withBorder
+                    className={classes.card}
+                >
+                    <Card.Section withBorder>
+                        <Image
+                            src={props.selectedProject?.imgUrl[0]}
+                            alt={props.selectedProject?.name + " image"}
+                            fit="cover"
+                        />
+                    </Card.Section>
+                    <Card.Section p="md" withBorder>
+                        <Text size={isNotPc ? "md" : "xl"}>
+                            {props.selectedProject?.description}
+                        </Text>
+                    </Card.Section>
+                    <Card.Section p="md">
+                        {props.selectedProject?.tech.map((tech, index) => (
+                            <Badge
+                                key={index + 1}
+                                color="blue"
+                                variant="light"
+                                size={isNotPc ? "lg" : "xl"}
+                                mr={"xs"}
+                                mb={"xs"}
+                            >
+                                {tech}
+                            </Badge>
                         ))}
-                        <ActionIcon
-                            onClick={handleNext}
-                            size={"md"}
-                            radius={"xl"}
-                            variant="gradient"
-                            gradient={{ from: "blue", to: "cyan", deg: 90 }}
-                        >
-                            <IconArrowBadgeRightFilled size={20} />
-                        </ActionIcon>
-                    </Group>
-                </Grid.Col>
-                <Grid.Col span={{ base: 12, md: 4 }}>
-                    <Text size={isNotPc ? "md" : "xl"}>
-                        {props.selectedProject?.description}
-                    </Text>
-                    <Divider size={"md"} my={"md"} />
-                    {props.selectedProject?.tech.map((tech, index) => (
-                        <Badge
-                            key={index + 1}
-                            color="blue"
-                            variant="light"
-                            size={isNotPc ? "lg" : "xl"}
-                            mr={"xs"}
-                            mb={"xs"}
-                        >
-                            {tech}
-                        </Badge>
-                    ))}
-                </Grid.Col>
-            </Grid>
-            <Group justify="center" mt="xl" gap="xs">
+                    </Card.Section>
+                </Card>
+            </Stack>
+            <Affix
+                position={{ bottom: 0, right: 0 }}
+                w={"100%"}
+                h={"60px"}
+                style={{ alignContent: "center" }}
+                bg={
+                    "light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6))"
+                }
+            >
                 <Button
                     onClick={props.close}
                     size="sm"
@@ -154,10 +133,15 @@ export const Detail = (props: Readonly<DetailProps>) => {
                     variant="gradient"
                     gradient={{ from: "blue", to: "cyan", deg: 90 }}
                     leftSection={<IconArrowNarrowLeft size={20} />}
+                    style={{
+                        display: props.opened ? "flex" : "none",
+                        justifySelf: "flex-end",
+                        marginRight: "1rem",
+                    }}
                 >
                     {props.btnBack}
                 </Button>
-            </Group>
+            </Affix>
         </Modal>
     );
 };
