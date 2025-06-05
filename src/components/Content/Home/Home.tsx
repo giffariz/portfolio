@@ -47,7 +47,7 @@ export default function Home({ onClickProjects }: Readonly<IHomeProps>) {
                 </Title>
             </div>
 
-            <Container p={0} size={600} mt={30}>
+            <Container p={0} size={600} mt={30} style={{ display: "flex", justifyContent: "center" }}>
                 <Text size="lg" c="dimmed" className={classes.description}>
                     {t.home.shortDescription}
                 </Text>
