@@ -23,7 +23,7 @@ export const Projects = () => {
             <TitleSection title1={t.projects.title1} title2={t.projects.title2} />
             <div className={classes.card}>
                 {t.projects.items.map((item, index) => (
-                    <Container key={index + 1} w={{ base: "100dvw", md: "50dvw" }}>
+                    <Container key={index + 1} w={{ base: "95dvw", md: "50dvw" }}>
                         <IconRocket size={40} className={classes.icondetail} />
                         <Card
                             key={index + 1}

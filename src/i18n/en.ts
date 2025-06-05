@@ -77,7 +77,7 @@ const en = {
     about: {
         title1: "Behind the",
         title2: "Code",
-        motto: "For me, a digital solution isn't about how fast it's built — but how well it lasts, adapts, and maintains its quality over time.",
+        motto: "a digital solution isn't about how fast it's built — but how well it lasts, adapts, and maintains its quality over time.",
         quote: "Readable code is not optional",
         techSkills: [
             "React",

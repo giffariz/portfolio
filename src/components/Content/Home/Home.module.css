@@ -8,7 +8,7 @@
     margin-bottom: var(--mantine-spacing-xs);
     font-family: Outfit, var(--mantine-font-family);
 
-    @media (max-width: $mantine-breakpoint-xs) {
+    @media (max-width: $mantine-breakpoint-lg) {
         font-size: 20px;
     }
 }
@@ -25,9 +25,11 @@
 
 .description {
     text-align: center;
+    justify-self: center;
 
     @media (max-width: $mantine-breakpoint-xs) {
-        font-size: var(--mantine-font-size-md);
+        width: 80%;
+        font-size: var(--mantine-font-size-sm);
     }
 }
 

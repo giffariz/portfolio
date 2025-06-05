@@ -77,7 +77,7 @@ const id = {
     about: {
         title1: "Di balik",
         title2: "Kode",
-        motto: "Bagiku, solusi digital bukan soal cepat jadi — tapi bagaimana ia bisa bertahan, beradaptasi, dan tetap terjaga kualitasnya seiring waktu.",
+        motto: "solusi digital bukan soal cepat jadi — tapi bagaimana ia bisa bertahan, beradaptasi, dan tetap terjaga kualitasnya seiring waktu.",
         quote: "Kode yang mudah dibaca itu wajib",
         techSkills: [
             "React",

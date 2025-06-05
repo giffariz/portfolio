@@ -9,6 +9,7 @@ import {
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import 'react-photo-view/dist/react-photo-view.css';
 import { Loader } from "@/components/Loader/Loader";
 import { LanguageProvider } from "@/context/LanguageContext";
 

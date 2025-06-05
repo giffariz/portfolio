@@ -24,6 +24,7 @@ export default function ExperienceScrollWithDots() {
                 {t.experience.items.map((item, index) => (
                     <Timeline.Item
                         key={index + 1}
+                        w={{ base: "90dvw", md: "50dvw" }}
                         bullet={
                             <ThemeIcon
                                 size={22}
