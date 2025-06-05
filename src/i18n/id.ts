@@ -95,6 +95,13 @@ const id = {
         cv: "Lihat CV",
         email: "Ceritakan Idemu",
     },
+
+    tooltip: {
+        instruction: "Untuk berpindah antar tab",
+        mobile: "Swipe kiri atau kanan",
+        desktop: "Scroll horizontal (touchpad) atau Shift + mouse wheel",
+        all: "atau klik tab di bawah",
+    }
 };
 
 export default id;

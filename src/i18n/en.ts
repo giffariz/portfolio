@@ -95,6 +95,13 @@ const en = {
         cv: "View CV",
         email: "Tell Me Your Idea",
     },
+
+    tooltip: {
+        instruction: "To navigate between tabs",
+        mobile: "Swipe left or right",
+        desktop: "Horizontal scroll (touchpad) or Shift + mouse wheel",
+        all: "or click the tabs below",
+    }
 };
 
 export default en;

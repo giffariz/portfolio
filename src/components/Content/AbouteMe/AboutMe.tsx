@@ -15,7 +15,7 @@ import {
 } from "@mantine/core";
 import { IconQuoteFilled, IconSend2 } from "@tabler/icons-react";
 import { ContactCard } from "@/components/ContactCard/ContactCard";
-import { useDisclosure } from "@mantine/hooks";
+import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 import TextPressure from "../../ReactBits/TextPressure/TextPressure";
 import Waves from "@/components/ReactBits/Wave/Waves";
 import { League_Spartan } from "next/font/google";
@@ -28,6 +28,7 @@ const leagueSpartan = League_Spartan({
 export const AboutMe = () => {
     const { t } = useLanguage();
     const { colorScheme } = useMantineColorScheme();
+    const isNotPc = useMediaQuery("(max-width: 64em)");
     const [opened, { open, close }] = useDisclosure(false);
 
     return (
@@ -59,7 +60,7 @@ export const AboutMe = () => {
                             <IconSend2 />
                         </Group>
                     </div>
-                    <Stack p={"md"} className={classes.hello + " noSwipe"}>
+                    <Stack p={"md"} className={isNotPc ? classes.hello + " noSwipe" : classes.hello}>
                         <Waves
                             lineColor={colorScheme === "dark" ? "black" : "lightgray"}
                             waveSpeedX={0.02}

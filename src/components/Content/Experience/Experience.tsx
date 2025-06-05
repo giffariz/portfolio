@@ -46,7 +46,7 @@ export default function ExperienceScrollWithDots() {
                                 </Flex>
                             </Card.Section>
                             <Card.Section className={classes.responsibilitySection}>
-                                <Accordion variant="filled" className={classes.responsibilitySection}>
+                                <Accordion variant="filled" className={classes.responsibilitySection} defaultValue={ index === 0 ? "detail" : null}>
                                     <Accordion.Item value="detail">
                                         <Accordion.Control className={classes.responsibilitySection}>
                                             <Text className={classes.role}>{item.role}</Text>

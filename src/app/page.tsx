@@ -6,6 +6,7 @@ import LanguageSelector from "@/components/LanguageSelector/LanguageSelector";
 import { ThemeToggle } from "@/components/ThemeToggle/ThemeToggle";
 import { Logo } from "@/components/Loader/Logo";
 import { useSwipeHandler } from "@/hooks/useSwipeHandler";
+import Tooltip from "@/components/Tooltip/Tooltip";
 
 export default function Home() {
   const { activeTab, setActiveTab } = useSwipeHandler();
@@ -25,6 +26,7 @@ export default function Home() {
             <Group gap={5} mt={-8}>
               <LanguageSelector />
               <ThemeToggle />
+              <Tooltip />
             </Group>
           </Group>
         </AppShell.Header>
